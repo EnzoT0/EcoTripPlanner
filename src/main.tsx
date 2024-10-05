@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Map from './Map.tsx';
 import App from "./App.tsx";
 import "./index.css";
 import { Amplify } from "aws-amplify";
