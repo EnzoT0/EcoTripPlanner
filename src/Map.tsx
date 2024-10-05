@@ -75,11 +75,13 @@ const Map: FC = () => {
         //     [-73.8671258, 40.82234996],
         //   ]);
         
-          // Remove waypoints
-          directions.removeWaypoint(0);
+          // // Remove waypoints
+          // directions.removeWaypoint(0);
         
-          // Add waypoints
-          directions.addWaypoint([-73.8671258, 40.82234996], 0);
+          // // Add waypoints
+          // directions.addWaypoint([-73.8671258, 40.82234996], 0);
+
+          
 
           directions.clear();
       })
@@ -92,13 +94,33 @@ const Map: FC = () => {
             .setLngLat([lngLat.lng, lngLat.lat])
             .addTo(map.current!);
 
+            const popup = new maplibregl.Popup({ offset: 25 });
+
+            // Attach the popup to the marker
+            marker.setPopup(popup);
+
+            // Optional: If you want the popup to be shown by default
+            // marker.togglePopup();
+
             const markerElement = marker.getElement();
             markerElement.style.cursor = 'pointer'; // Change cursor to pointer when hovering over the marker
 
             marker.getElement().addEventListener('click', (e) => {
                 e.stopPropagation();
                 marker.remove();
-        });
+            });
+
+            marker.getElement().addEventListener('mouseenter', () => {
+              const hoveredLngLat = marker.getLngLat();
+                    popup.setLngLat(hoveredLngLat)
+                        .setHTML(`<h3>Coordinates</h3><p>Longitude: ${hoveredLngLat.lng}, Latitude: ${hoveredLngLat.lat}</p>`)
+                        .addTo(map.current!);
+            });
+                
+                // Hide popup on mouseleave
+            marker.getElement().addEventListener('mouseleave', () => {
+                popup.remove();
+            });
     });
     
     }, [API_KEY, lng, lat, zoom]);
