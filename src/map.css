@@ -17,3 +17,14 @@ html, body {
     width: 100%; /* Fill entire container width */
     height: 100%; /* Fill entire container height */
 }
+
+.form-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}

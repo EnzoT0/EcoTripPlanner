@@ -55,3 +55,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
+
+.form-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order */
+  cursor: pointer; /* Add a pointer on hover */
+  
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.sign-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: white;
+  padding: 15px 25px; /* Increase padding for a bigger button */
+  font-size: 16px; /* Increase font size */
+  border-radius: 8px; /* Adjust border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.sign-out:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
