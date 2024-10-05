@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevents scrollbars from showing */
+}
+
+.map-wrap {
+    position: relative;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.map {
+    position: absolute;
+    width: 100%; /* Fill entire container width */
+    height: 100%; /* Fill entire container height */
+}
