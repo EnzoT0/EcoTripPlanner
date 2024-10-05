@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, FC, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import MapLibreGlDirections from '@maplibre/maplibre-gl-directions';
 import './map.css';
 
 
@@ -15,6 +16,7 @@ const Map: FC = () => {
     const lat: number = 49.2827;
     const zoom: number = 14;
     const API_KEY: string = 'VqOq8qTPIUbXEni1yY0L';
+    
 
     useEffect(() => {
       if (map.current || !mapContainer.current) return; // stops map from initializing more than once
@@ -26,6 +28,61 @@ const Map: FC = () => {
             zoom: zoom
         });
         
+      // Add the 3D buildings layer after the map style loads
+      map.current.on('load', () => {
+        // Add a 3D buildings layer using 'fill-extrusion'
+        map.current!.addLayer({
+            id: '3d-buildings',
+            source: 'openmaptiles', // OpenMapTiles source name from the MapTiler style
+            'source-layer': 'building',
+            type: 'fill-extrusion',
+            minzoom: 15,
+            paint: {
+                'fill-extrusion-color': '#aaa',
+                'fill-extrusion-height': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    15,
+                    0,
+                    16.05,
+                    ['get', 'height']
+                ],
+                'fill-extrusion-base': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    15,
+                    0,
+                    16.05,
+                    ['get', 'min_height']
+                ],
+                'fill-extrusion-opacity': 0.6
+            }
+        });
+         
+      });
+
+      map.current.on('load', () => {
+        const directions = new MapLibreGlDirections(map.current!);
+        
+
+        directions.interactive = true;
+        
+        // set waypoint
+        // directions.setWaypoints([
+        //     [-73.8271025, 40.8032906],
+        //     [-73.8671258, 40.82234996],
+        //   ]);
+        
+          // Remove waypoints
+          directions.removeWaypoint(0);
+        
+          // Add waypoints
+          directions.addWaypoint([-73.8671258, 40.82234996], 0);
+
+          directions.clear();
+      })
 
         map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
         map.current.on('click', (event) => {
@@ -68,7 +125,7 @@ const Map: FC = () => {
                       <option value="car">Car</option>
                       <option value="bus">Bus</option>
                       <option value="truck">Truck</option>
-                      <option value="truck">Foot</option>
+                      <option value="foot">Foot</option>
                   </select>
 
                   <label htmlFor="startLocation">Start Location:</label>
