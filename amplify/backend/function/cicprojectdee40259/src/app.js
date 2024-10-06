@@ -96,9 +96,6 @@ const invokeLambda = async (routes) => {
     return `Route ${index + 1}: Start at ${route.StartPosition} to End at ${route.EndPosition}, covering a distance of ${route.Distance} km, and taking ${route.DurationSeconds / 60} minutes.`;
     }).join('\n');
   try {
-      // Constructing the route information to include in the message
-      
-
       const response = await fetch(url, {
           method: 'POST'.
           headers: {
