@@ -92,12 +92,10 @@ async function getBestRoute(start, end, departureTime) {
 const invokeLambda = async (routes) => {
   const url = "https://vk9hc6kko2.execute-api.us-west-2.amazonaws.com/prod/invoke-model";
 
+    const formattedRoutes = routes.map((route, index) => {
+    return `Route ${index + 1}: Start at ${route.StartPosition} to End at ${route.EndPosition}, covering a distance of ${route.Distance} km, and taking ${route.DurationSeconds / 60} minutes.`;
+    }).join('\n');
   try {
-      // Constructing the route information to include in the message
-      const formattedRoutes = routes.map((route, index) => {
-          return `Route ${index + 1}: Start at ${route.StartPosition} to End at ${route.EndPosition}, covering a distance of ${route.Distance} km, and taking ${route.DurationSeconds / 60} minutes.`;
-      }).join('\n');
-
       const response = await fetch(url, {
           method: 'POST'.
           headers: {

@@ -15,11 +15,11 @@
       "function": {
         "cicprojectc1236755": {
           "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
-          "s3Key": "amplify-builds/cicprojectc1236755-7950305448734c6d6b67-build.zip"
+          "s3Key": "amplify-builds/cicprojectc1236755-5a4f2b716c584c76526d-build.zip"
         },
         "cicprojectdee40259": {
           "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
-          "s3Key": "amplify-builds/cicprojectdee40259-7a66702f5959344c7664-build.zip"
+          "s3Key": "amplify-builds/cicprojectdee40259-5549637234587357667a-build.zip"
         }
       },
       "api": {

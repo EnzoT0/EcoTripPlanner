@@ -38,7 +38,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-cicproject-dev-2ef9a-deployment/amplify-cfn-templates/api/api5138816f-cloudformation-template.json",
         "logicalId": "apiapi5138816f"
       },
-      "lastPushTimeStamp": "2024-10-06T01:10:22.576Z",
+      "lastPushTimeStamp": "2024-10-06T02:29:35.957Z",
       "output": {
         "ApiName": "api5138816f",
         "RootUrl": "https://zlvjcsrrkj.execute-api.us-west-2.amazonaws.com/dev",
@@ -52,19 +52,19 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2024-10-06T01:09:18.065Z",
+      "lastBuildTimeStamp": "2024-10-06T02:28:33.085Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2024-10-06T01:09:19.385Z",
-      "distZipFilename": "cicprojectc1236755-7950305448734c6d6b67-build.zip",
+      "lastPackageTimeStamp": "2024-10-06T02:28:34.336Z",
+      "distZipFilename": "cicprojectc1236755-5a4f2b716c584c76526d-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
-        "s3Key": "amplify-builds/cicprojectc1236755-7950305448734c6d6b67-build.zip"
+        "s3Key": "amplify-builds/cicprojectc1236755-5a4f2b716c584c76526d-build.zip"
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-cicproject-dev-2ef9a-deployment/amplify-cfn-templates/function/cicprojectc1236755-cloudformation-template.json",
         "logicalId": "functioncicprojectc1236755"
       },
-      "lastPushTimeStamp": "2024-10-06T01:10:22.645Z",
+      "lastPushTimeStamp": "2024-10-06T02:29:36.033Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::691532840035:role/cicprojectLambdaRole495cf636-dev",
         "Region": "us-west-2",
@@ -72,25 +72,25 @@
         "Name": "cicprojectc1236755-dev",
         "LambdaExecutionRole": "cicprojectLambdaRole495cf636-dev"
       },
-      "lastPushDirHash": "uzANX3e4EMv1vdpUgXmJRy8HSis="
+      "lastPushDirHash": "tR0McjaxaMRn3lShvyjZq2mlgwg="
     },
     "cicprojectdee40259": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2024-10-06T01:09:20.420Z",
+      "lastBuildTimeStamp": "2024-10-06T02:08:31.751Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2024-10-06T01:09:21.303Z",
-      "distZipFilename": "cicprojectdee40259-7a66702f5959344c7664-build.zip",
+      "lastPackageTimeStamp": "2024-10-06T02:08:33.011Z",
+      "distZipFilename": "cicprojectdee40259-5549637234587357667a-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
-        "s3Key": "amplify-builds/cicprojectdee40259-7a66702f5959344c7664-build.zip"
+        "s3Key": "amplify-builds/cicprojectdee40259-5549637234587357667a-build.zip"
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-cicproject-dev-2ef9a-deployment/amplify-cfn-templates/function/cicprojectdee40259-cloudformation-template.json",
         "logicalId": "functioncicprojectdee40259"
       },
-      "lastPushTimeStamp": "2024-10-06T01:10:22.645Z",
+      "lastPushTimeStamp": "2024-10-06T02:29:35.967Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::691532840035:role/cicprojectLambdaRolee442acfa-dev",
         "Region": "us-west-2",
@@ -98,7 +98,7 @@
         "Name": "cicprojectdee40259-dev",
         "LambdaExecutionRole": "cicprojectLambdaRolee442acfa-dev"
       },
-      "lastPushDirHash": "VHtlW3soEycK+EZyVHMw8KxRRHE="
+      "lastPushDirHash": "jr6jJY81aiolCxmVocNiDyjLxac="
     }
   }
 }

@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/transitrout', async function (req, res) { // make the function async
+app.post('/transitrout', async function (req, res) { // make the function async
   try {
     const start = req.query.startpoint;
     const end = req.query.endpoint;
@@ -70,6 +70,9 @@ app.get('/transitrout', async function (req, res) { // make the function async
 
       // Ensure that the response is in JSON format
       const data = await response.json();
+      console.log("Lambda response:", data);
+
+      // First, parse the outer JSON
       let parsedContent = data.body.split('"text":"')[1]; // Extract the part after "text"
       parsedContent = parsedContent.split('"}')[0]; // Take everything before the final closing "
 
@@ -143,6 +146,7 @@ app.get('/transitrout', async function (req, res) { // make the function async
         "route": route,
         "geojson line": geojsonLine
       };
+
 
       // const cleanedText = data.body.replace(/\\n/g, '').replace(/\\"/g, '"');
       // const escapedText = JSON.parse(cleanedText);
