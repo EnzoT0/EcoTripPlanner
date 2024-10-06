@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/transitrout": {
+      "name": "/transitrout",
+      "lambdaFunction": "cicprojectc1236755",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/routes": {
+      "name": "/routes",
+      "lambdaFunction": "cicprojectdee40259",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
