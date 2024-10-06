@@ -95,21 +95,20 @@ const invokeLambda = async (routes) => {
     const formattedRoutes = routes.map((route, index) => {
     return `Route ${index + 1}: Start at ${route.StartPosition} to End at ${route.EndPosition}, covering a distance of ${route.Distance} km, and taking ${route.DurationSeconds / 60} minutes.`;
     }).join('\n');
-    try {
-      response = await fetch(url, {
-        method: 'POST',  // Specify the method as POST
-        headers: {
-          'Content-Type': 'application/json'  // Ensure the content type is set to JSON
-        },
-        body: JSON.stringify({
-          messageContent: messageContent,
-          maxTokens: 300,  // Sending the necessary parameters in the body
-        })
-      });
-    } catch (error) {
+  try {
+      const response = await fetch(url, {
+          method: 'POST'.
+          headers: {
+            'Content-Type': 'application/json'  // Ensure the content type is set to JSON
+          },
+          body: JSON.stringify({
+            messageContent: messageContent,
+            maxTokens: 300,  // Sending the necessary parameters in the body
+          })
+  })
+  } catch (error) {
       throw error;
-    }
-
+  }
 };
 
 const extractCarbonFootprint = (lambdaResponse) => {

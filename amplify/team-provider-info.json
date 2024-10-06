@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cicproject-dev-2ef9a-authRole",
+      "UnauthRoleArn": "arn:aws:iam::691532840035:role/amplify-cicproject-dev-2ef9a-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::691532840035:role/amplify-cicproject-dev-2ef9a-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
+      "UnauthRoleName": "amplify-cicproject-dev-2ef9a-unauthRole",
+      "StackName": "amplify-cicproject-dev-2ef9a",
+      "StackId": "arn:aws:cloudformation:us-west-2:691532840035:stack/amplify-cicproject-dev-2ef9a/4c09a970-8362-11ef-bb4c-0aac54fe2347",
+      "AmplifyAppId": "d3tsb0cy43x38a"
+    },
+    "categories": {
+      "function": {
+        "cicprojectc1236755": {
+          "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
+          "s3Key": "amplify-builds/cicprojectc1236755-7950305448734c6d6b67-build.zip"
+        },
+        "cicprojectdee40259": {
+          "deploymentBucketName": "amplify-cicproject-dev-2ef9a-deployment",
+          "s3Key": "amplify-builds/cicprojectdee40259-7a66702f5959344c7664-build.zip"
+        }
+      },
+      "api": {
+        "api5138816f": {}
+      }
+    }
+  }
+}
