@@ -1,0 +1,72 @@
+{
+  "api": {
+    "api5138816f": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "cicprojectc1236755"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "cicprojectdee40259"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "cicprojectc1236755": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "cicprojectdee40259": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_cicprojectc1236755_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cicprojectc1236755"
+        }
+      ]
+    },
+    "AMPLIFY_function_cicprojectc1236755_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cicprojectc1236755"
+        }
+      ]
+    },
+    "AMPLIFY_function_cicprojectdee40259_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cicprojectdee40259"
+        }
+      ]
+    },
+    "AMPLIFY_function_cicprojectdee40259_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "cicprojectdee40259"
+        }
+      ]
+    }
+  }
+}

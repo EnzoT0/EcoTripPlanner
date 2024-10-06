@@ -19,12 +19,61 @@ html, body {
 }
 
 .form-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: absolute; /* Positions the form container absolutely */
+    top: 10px; /* Places it 10px from the top */
+    left: 10px; /* Places it 10px from the left */
+    z-index: 1; /* Ensures it's on top of the map */
+    background-color: white; /* Sets the background color to white */
+    padding: 10px; /* Adds padding inside the form container */
+    border-radius: 5px; /* Rounds the corners of the form */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
 }
+
+label {
+    display: block; /* Make labels block elements to stack vertically */
+    margin: 10px 0; /* Add margin to space out the labels */
+    letter-spacing: 1px; /* Increase space between letters */
+    word-spacing: 2px; /* Increase space between words */
+}
+
+select, 
+input, 
+button {
+    display: block; /* Makes each input element block level */
+    margin: 10px 0; /* Adds vertical spacing between inputs */
+    padding: 8px; /* Adds padding inside the input elements */
+    font-size: 16px; /* Increases font size for better readability */
+    border: 1px solid #ccc; /* Adds a border to the inputs */
+    border-radius: 4px; /* Rounds the corners of the inputs */
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    letter-spacing: 1px; /* Increase space between letters in button text */
+    word-spacing: 2px; /* Increase space between words in button text */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.map-wrap {
+    position: relative; /* Allows the form container to position absolutely within it */
+}
+
+
+
+.form-container2 {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
