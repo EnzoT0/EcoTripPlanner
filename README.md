@@ -1,4 +1,5 @@
 # Carbon Footprint Efficient Routing
+UBC CIC Generative AI and Sustainability Hackathon 2024
 
 ## Overview
 This project aims to find the most carbon footprint-efficient routes for transportation, specifically focusing on public transport options. The application retrieves route information and calculates the carbon emissions associated with each route, allowing users to select options that minimize their environmental impact.
